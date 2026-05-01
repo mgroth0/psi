@@ -1,0 +1,17 @@
+{
+    "type": "BasicJvmOnlyMod",
+    "dependencies": [
+        {
+            "type": "Project",
+            "cfg": "implementation",
+            "path": ":k:lang"
+        },
+        {
+            "type": "Projects",
+            "cfg": "testImplementation",
+            "paths": [
+                ":k:test"
+            ]
+        }
+    ]
+}

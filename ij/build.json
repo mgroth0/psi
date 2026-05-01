@@ -1,0 +1,19 @@
+{
+    "type": "IdeaPluginMod",
+    "idea": {},
+    "dependencies": [
+        {
+            "type": "Project",
+            "cfg": "api",
+            "path": ":k:psi",
+            "excludeSets": [
+                "KotlinStdLib",
+                "KotlinXCoroutines"
+            ]
+        },
+        {
+            "type": "BundledIdePlugin",
+            "id": "org.jetbrains.kotlin"
+        }
+    ]
+}

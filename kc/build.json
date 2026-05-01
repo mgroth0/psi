@@ -1,0 +1,32 @@
+{
+    "type": "BasicJvmOnlyMod",
+    "dependencies": [
+        {
+            "type": "Projects",
+            "cfg": "api",
+            "paths": [
+                ":k:model",
+                ":k:psi"
+            ]
+        },
+        {
+            "type": "Projects",
+            "cfg": "implementation",
+            "paths": [
+                ":k:file"
+            ]
+        },
+        {
+            "type": "Lib",
+            "cfg": "compileOnly",
+            "key": "kotlin-compiler-embeddable"
+        },
+        {
+            "type": "Projects",
+            "cfg": "testImplementation",
+            "paths": [
+                ":k:test"
+            ]
+        }
+    ]
+}
