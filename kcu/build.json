@@ -1,24 +1,26 @@
 {
-    "note": "Flavor-agnostic. The compileOnly compiler is only for org.jetbrains.kotlin.psi.KtFile, whose FQN is identical in the shaded and unshaded compilers, so either would do and consumers supply their own. Do not reference com.intellij here in either spelling — that is what the kc / kcu / ij bindings are for.",
+    "note": "Binds :k:psi to the unshaded kotlin-compiler (com.intellij.* not relocated), as detekt 2.0 requires. Sibling kc binds the shaded kotlin-compiler-embeddable, as ktlint requires.",
     "type": "BasicJvmOnlyMod",
     "dependencies": [
         {
-            "type": "Project",
+            "type": "Projects",
             "cfg": "api",
-            "path": ":k:model"
+            "paths": [
+                ":k:model",
+                ":k:psi"
+            ]
         },
         {
             "type": "Projects",
             "cfg": "implementation",
             "paths": [
-                ":k:lang",
                 ":k:file"
             ]
         },
         {
             "type": "Lib",
             "cfg": "compileOnly",
-            "key": "kotlin-compiler-embeddable"
+            "key": "kotlin-compiler"
         },
         {
             "type": "Projects",

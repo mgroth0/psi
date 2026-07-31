@@ -1,4 +1,4 @@
-package matt.psi.kc.filepath
+package matt.psi.filepath
 
 import matt.file.ext.FileExtension
 import matt.file.isgen.kotlinFileIsGeneratedButNotByMe
@@ -14,6 +14,7 @@ import kotlin.io.path.Path
 import kotlin.io.path.extension
 import kotlin.io.path.name
 
+/*this really doesn't belong here. Need to find better home when I can.*/
 class KtFilePathInfo private constructor(
     val absolutePath: UnsafeFilePath,
     val fileName: String,
